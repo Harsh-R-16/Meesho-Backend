@@ -2,21 +2,21 @@ const Product = require("../models/productModel");
 // const allProducts = require("../AllProducts");
 
 exports.getAllProducts = async (req, res) => {
-  // try {
-  console.log(req.query, { type: "Beauty & Health" });
-  const allProducts = await Product.find().limit(10);
-  res.status(200).json({
-    message: "Success!!!",
-    information: "Meesho Website Api",
-    results: allProducts.length,
-    data: allProducts,
-  });
-  // } catch (err) {
-  //   res.status(404).json({
-  //     status: "Error in fetching products",
-  //     message: err,
-  //   });
-  // }
+  try {
+    console.log(req.query, { type: "Beauty & Health" });
+    const allProducts = await Product.find();
+    res.status(200).json({
+      message: "Success!!!",
+      information: "Meesho Website Api",
+      results: allProducts.length,
+      data: allProducts,
+    });
+  } catch (err) {
+    res.status(404).json({
+      status: "Error in fetching products",
+      message: err,
+    });
+  }
 };
 
 exports.getSingleProduct = async (req, res) => {
