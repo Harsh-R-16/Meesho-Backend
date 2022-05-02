@@ -1,0 +1,26 @@
+API Endpoints:
+
+Home: localhost:9000/ --> make HTML Page for redirects.
+Products: localhost:9000/api/v1/products
+
+and another for user signin signup.
+
+we will post on products router that supplier page functionality.
+
+module.exports.add=add
+module.exports=add default exports
+exports.add named exports
+
+emnvironment variables.
+
+type=[]
+
+women-ethnic
+women-western
+jewellery-accessories
+men
+beauty-health
+bags-footwear
+home-kitchen
+kids
+electronics
