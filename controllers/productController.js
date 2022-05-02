@@ -4,7 +4,7 @@ const Product = require("../models/productModel");
 exports.getAllProducts = async (req, res) => {
   // try {
   console.log(req.query, { type: "Beauty & Health" });
-  const allProducts = await Product.find();
+  const allProducts = await Product.find().limit(10);
   res.status(200).json({
     message: "Success!!!",
     information: "Meesho Website Api",
