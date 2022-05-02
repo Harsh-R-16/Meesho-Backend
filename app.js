@@ -34,4 +34,11 @@ app.get("/", (req, res) => {
 app.use("/api/v1/products", productRouter);
 app.use("/api/v1/users", userRouter);
 
+app.all("*", (req, res) => {
+  res.status(404).json({
+    status: "Not Found anything",
+    message: `Can't find ${req.originalUrl} on this server!`,
+  });
+});
+
 module.exports = app;

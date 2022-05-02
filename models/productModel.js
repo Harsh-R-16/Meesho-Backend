@@ -49,6 +49,11 @@ const productSchema = new mongoose.Schema({
   },
 });
 
+productSchema.virtual("link").get(() => {
+  let link = this.type.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-");
+  return link;
+});
+
 const Product = mongoose.model("product", productSchema);
 
 module.exports = Product;
