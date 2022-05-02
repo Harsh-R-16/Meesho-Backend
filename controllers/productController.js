@@ -19,6 +19,24 @@ exports.getAllProducts = async (req, res) => {
   }
 };
 
+exports.getTopProducts = async (req, res) => {
+  try {
+    const allProducts = await Product.find();
+    allProducts.sort(() => Math.random() - 0.5);
+    res.status(200).json({
+      message: "Success!!!",
+      information: "Meesho Website Api",
+      results: 100,
+      data: allProducts.slice(0, 100),
+    });
+  } catch (err) {
+    res.status(404).json({
+      status: "Error in fetching products",
+      message: err,
+    });
+  }
+};
+
 exports.getSingleProduct = async (req, res) => {
   try {
     const { id } = req.params;

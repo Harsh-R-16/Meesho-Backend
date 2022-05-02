@@ -6,6 +6,7 @@ const {
   getSingleProduct,
   updateProduct,
   deleteProduct,
+  getTopProducts,
 } = require("../controllers/productController");
 
 const router = express.Router();
@@ -19,6 +20,8 @@ router.param("id", (req, res, next, value) => {
 
 router.route("/").get(getAllProducts).post(createProduct);
 // we can chain middlewares in routes itself like .get(middleware1,middleware2,getAllProducts)
+
+router.route("/top").get(getTopProducts);
 
 router
   .route("/:id")
