@@ -9,7 +9,7 @@ console.log(app.get("env")); // by default development
 
 dotenv.config({ path: "./config.env" });
 
-let db = process.env.DATABASE_LOCAL;
+let db = process.env.DATABASE;
 
 mongoose
   .connect(db, {
