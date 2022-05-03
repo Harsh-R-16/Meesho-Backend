@@ -1,8 +1,11 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const app = require("./app");
-// const allProducts = require("./AllProducts");
+const allProducts = require("./AllProducts");
 const Product = require("./models/productModel");
+allProducts.forEach((product) => {
+  delete product.id;
+});
 
 console.log(app.get("env")); // by default development
 // console.log(process.env); //or process.config.USER or PORT

@@ -3,7 +3,7 @@ const Product = require("../models/productModel");
 
 exports.getAllProducts = async (req, res) => {
   try {
-    console.log(req.query, { type: "Beauty & Health" });
+    console.log(req.query);
     const allProducts = await Product.find();
     res.status(200).json({
       message: "Success!!!",
@@ -57,6 +57,7 @@ exports.getSingleProduct = async (req, res) => {
 exports.createProduct = async (req, res) => {
   try {
     const newProduct = await Product.create(req.body);
+    console.log(newProduct);
     res
       .status(200)
       .json({ message: "POST request successful!!!", data: newProduct });
