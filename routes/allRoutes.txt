@@ -11,7 +11,7 @@ Auth:
 
 1. Signup: https://meeshodb.herokuapp.com/api/v1/users/signup
 2. Login: https://meeshodb.herokuapp.com/api/v1/users/login
-3. Forgot Password: https://meeshodb.herokuapp.com/api/v1/forgotPassword
-4. Reset Password: https://meeshodb.herokuapp.com/api/v1/resetPassword
+3. Forgot Password: https://meeshodb.herokuapp.com/api/v1/users/forgotPassword
+4. Reset Password: https://meeshodb.herokuapp.com/api/v1/users/resetPassword
 
 Users: 
