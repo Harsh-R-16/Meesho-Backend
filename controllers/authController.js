@@ -67,6 +67,7 @@ exports.login = async (req, res) => {
       message: "Success!!!",
       information: "Meesho Website Api",
       token,
+      user,
     });
   } catch (err) {
     res.status(404).json({
