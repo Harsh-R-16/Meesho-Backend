@@ -12,9 +12,9 @@ console.log(app.get("env")); // by default development
 
 dotenv.config({ path: "./config.env" });
 
-let db = process.env.DATABASE_LOCAL;
-// let db =
-//   "mongodb+srv://meeshodb:meeshodb@cluster0.a7jj8.mongodb.net/meeshodb?retryWrites=true&w=majority";
+// let db = process.env.DATABASE_LOCAL;
+let db =
+  "mongodb+srv://meeshodb:meeshodb@cluster0.a7jj8.mongodb.net/meeshodb?retryWrites=true&w=majority";
 
 mongoose
   .connect(db, {
