@@ -4,6 +4,8 @@ const Product = require("../models/productModel");
 exports.getAllProducts = async (req, res) => {
   try {
     const allProducts = await Product.find();
+    const token = req.headers.authorization;
+    token && console.log(token.split(" ")[1]);
     res.status(200).json({
       message: "Success!!!",
       information: "Meesho Website Api",
@@ -90,13 +92,19 @@ exports.deleteProduct = async (req, res) => {
   try {
     const { id } = req.params;
     const product = Product.findByIdAndDelete(id);
-    res
-      .status(200)
-      .json({ message: "DELETE request successful!!!", data: product });
+    if (req.headers.type) {
+      return res
+        .status(200)
+        .json({ message: "DELETE request successful!!!", data: product });
+    } else {
+      return res
+        .status(400)
+        .json({ message: "You not authorized to delete product!" });
+    }
   } catch (err) {
     res.status(400).json({
       status: "Error in deleting product",
-      message: err,
+      message: "You not authorized to delete product!",
     });
   }
 };

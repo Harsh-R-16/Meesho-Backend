@@ -25,3 +25,21 @@ home-kitchen
 kids
 electronics
 
+Data modeling for Meesho Website
+
+1:1 1 movie and 1 movie name.
+
+1:many -
+    1:few - 1 movie with few awards.
+    1:many - 1 movie with thousand reviews.
+    1:ton - 1 movie with thousands of views.
+
+many:many 
+1 movie many actors and actors in many movies.
+
+referencing and embeding
+normalization vs denormalization
+
+1 document limit 16MB in mongo db
+
+

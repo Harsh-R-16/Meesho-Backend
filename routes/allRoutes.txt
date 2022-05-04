@@ -1,0 +1,15 @@
+Products:
+
+1. All Products: https://meeshodb.herokuapp.com/api/v1/products -- GET
+2. Top Products: https://meeshodb.herokuapp.com/api/v1/products/top -- GET
+3. Single Product: https://meeshodb.herokuapp.com/api/v1/products/6270b5da9eb673200cfd6a9b -- GET
+4. Update Product: https://meeshodb.herokuapp.com/api/v1/products/6270b5da9eb673200cfd6a9b -- PATCH {type:Admin} in body
+5. Add Product: https://meeshodb.herokuapp.com/api/v1/products -- POST {type:Admin} in body
+6. Delete Product: https://meeshodb.herokuapp.com/api/v1/products/6270b5da9eb673200cfd6a9b -- Delete {type:Admin} in body
+
+Auth:
+
+1. Signup: https://meeshodb.herokuapp.com/api/v1/users/signup
+2. Login: https://meeshodb.herokuapp.com/api/v1/users/login
+3. Forgot Password: https://meeshodb.herokuapp.com/api/v1/forgotPassword
+4. Reset Password: https://meeshodb.herokuapp.com/api/v1/resetPassword
