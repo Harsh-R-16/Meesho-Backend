@@ -61,11 +61,11 @@ app.post("/verification", (req, res) => {
 
 app.post("/razorpay", async (req, res) => {
   const payment_capture = 1;
-  const amount = 1600;
+  const amount = req.body.amount || 1000;
   const currency = "INR";
 
   const options = {
-    amount: amount * 100,
+    amount: amount,
     currency,
     receipt: "xD1T-EA8-",
     payment_capture,
