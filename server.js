@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const app = require("./app");
-const allProducts = require("./AllProducts");
 const Product = require("./models/productModel");
+const allProducts = require("./AllProducts");
 allProducts.forEach((product) => {
   delete product.id;
 });
