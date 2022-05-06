@@ -93,6 +93,9 @@ app.get("/", (req, res) => {
     visitors: ++a,
   });
 });
+app.get("/visitors", (req, res) => {
+  res.status(200).json({ visitors: a });
+});
 
 // ******************************** //
 
