@@ -85,11 +85,12 @@ app.post("/razorpay", async (req, res) => {
 });
 
 // ******************************** //
-
+let a = 0;
 app.get("/", (req, res) => {
   res.status(200).json({
     message: "Success!!!",
     information: "Meesho Website Api",
+    visitors: ++a,
   });
 });
 
