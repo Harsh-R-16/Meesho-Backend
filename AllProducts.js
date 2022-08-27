@@ -4,7 +4,7 @@ let Sellers = [
   "SMART HANDICRAFT",
   "GOOD PRICE STORE",
   "KOTTY LIFESTYLE LIMITED",
-  "V King Kohli",
+  "V King Kohli Collection",
   "Satyasaidata",
   "Shivtrader",
   "Aromatic",
